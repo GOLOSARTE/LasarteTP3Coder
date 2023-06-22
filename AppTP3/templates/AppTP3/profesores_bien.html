@@ -1,0 +1,28 @@
+{% extends 'AppTP3/base.html' %}
+
+{% load static %}
+
+{% block titulo %}
+    PROFESORES
+{% endblock titulo %}
+
+{% block header %}
+        <header class="bg-dark py-5">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center my-5">
+                            <h1 class="display-5 fw-bolder text-white mb-2">SE AGREGO PROFESOR CON EXITO </h1>
+                           <a href="{% url 'profesores' %}" type="button" class="btn btn-light">Agregar Profeso Nuevo</a>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </header>
+        {% endblock header %}
+
+{% block main %}
+
+
+
+{% endblock main %}

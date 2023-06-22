@@ -1,0 +1,49 @@
+{% extends 'AppTP3/base.html' %}
+
+{% load static %}
+
+{% block titulo %}
+    PROFERSORES
+{% endblock titulo %}
+
+{% block header %}
+        <header class="bg-dark py-5">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center my-5">
+                            <h1 class="display-5 fw-bolder text-white mb-2"> PROFESORES </h1>
+                            <p class="lead text-white-50 mb-4">Agregar y ver profesores</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </header>
+        {% endblock header %}
+
+{% block main %}
+
+<div class="row">
+    <form action=""    method="POST">
+        {% csrf_token %}
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" name="nombre">
+    </div>
+    <br>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido" name="apellido">
+    </div>
+    <br>
+    <div class="col">
+        <input type="text" class="form-control" placeholder="Materia" aria-label="Materia" name="materia">
+      </div>
+      <br>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="E-mail" aria-label="E-mail" name="email">
+      </div>
+      <br>
+    <button type="submit" class="btn btn-secondary btn-lg">Enviar</button>
+</form>
+  </div>
+
+{% endblock main %}

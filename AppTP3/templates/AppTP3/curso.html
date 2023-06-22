@@ -1,0 +1,44 @@
+{% extends 'AppTP3/base.html' %}
+
+{% load static %}
+
+{% block titulo %}
+    CURSOS
+{% endblock titulo %}
+
+{% block header %}
+        <header class="bg-dark py-5">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center my-5">
+                            <h1 class="display-5 fw-bolder text-white mb-2">CURSOS </h1>
+                            <p class="lead text-white-50 mb-4">Agregar un curso</p>
+                            <a href="{% url 'buscar_curso' %}" type="button" class="btn btn-light">Buscar Curso</a>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </header>
+        {% endblock header %}
+
+{% block main %}
+
+
+    <div class="row">
+        <form action=""    method="POST">
+            {% csrf_token %}
+        <div class="col" >
+          <input type="text" class="form-control" placeholder="Materia" aria-label="Materia" name="nombre">
+        </div>
+        <br>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Camada" aria-label="camada" name="camada">
+        </div>
+        <br>
+         
+        <button type="submit" class="btn btn-secondary btn-lg">Enviar</button>
+    </form>
+      </div>
+
+{% endblock main %}
